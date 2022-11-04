@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MNG KARGO | BİREYSEL</title>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta http-equiv="Content-Language" content="tr" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+      />
+      <title>MNG KARGO | Bireysel</title>
+      <meta name="Description" content="" />
+      <meta name="theme-color" content="#0068b4" />
+      <link
+        rel="shortcut icon"
+        href="https://mngkargo.com.tr/assets/img/favicon.ico"
+        type="image/x-icon"
+      />
+      <link
+        rel="icon"
+        href="https://mngkargo.com.tr/assets/img/favicon.ico"
+        type="image/x-icon"
+      />
+      <link
+        rel="preload"
+        href="https://mngkargo.com.tr/assets/scss/_font.min.css"
+        as="style"
+      />
+      <link
+        rel="preload"
+        href="https://mngkargo.com.tr/assets/scss/master.min.css"
+        as="style"
+      />
+      <link
+        rel="preload"
+        href="https://mngkargo.com.tr/assets/css/main.min.css"
+        as="style"
+      />
+      <link rel="stylesheet" type="text/css" href="./style.css" />
+      <link
+        rel="stylesheet"
+        href="https://mngkargo.com.tr/assets/scss/_font.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://mngkargo.com.tr/assets/scss/master.min.css"
+      />
+      <link
+        href="https://mngkargo.com.tr/assets/css/main.min.css"
+        rel="stylesheet"
+      />
+      <!-- Google Tag Manager -->
+      <script
+        src="https://connect.facebook.net/signals/config/151077180530524?v=2.9.48&amp;r=stable"
+        async=""
+      ></script>
+      <script
+        async=""
+        src="https://connect.facebook.net/en_US/fbevents.js"
+      ></script>
+      <script
+        type="text/javascript"
+        async=""
+        src="https://www.google-analytics.com/analytics.js"
+      ></script>
+      <script
+        type="text/javascript"
+        async=""
+        src="https://www.googletagmanager.com/gtag/js?id=G-R8L0XSBYT9&amp;l=dataLayer&amp;cx=c"
+      ></script>
+      <script
+        async=""
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-P87X3WQ"
+      ></script>
+      <script>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js",
+          });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-P87X3WQ");
+      </script>
+      <!-- End Google Tag Manager -->
+      <style>
+        #mng-popup {
+          height: 100%;
+          background: rgba(99, 99, 99, 0.5);
+          position: fixed;
+          width: 100%;
+          z-index: 9999999;
+        }
+
+        .popupContent {
+          margin: auto 20%;
+          width: 60%;
+        }
+
+        .popup-desktop {
+          display: block;
+        }
+
+        .popup-mobil {
+          display: none;
+        }
+
+        @media screen and (max-width: 820px) {
+          .popup-desktop {
+            display: none;
+          }
+
+          .popup-mobil {
+            display: block;
+          }
+
+          .popupContent {
+            margin: auto 5%;
+            width: 90%;
+          }
+        }
+
+        .exit {
+          color: #fff;
+          padding: 7px;
+          border-radius: 0px 0px 1px 22px;
+          float: right;
+          font-weight: bold;
+          cursor: pointer;
+          position: relative;
+          top: 38px;
+          right: -1px;
+          font-size: 25px;
+          background: #f47920;
+        }
+      </style>
+      <style>
+        .loadingBox {
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+          background-color: #ffffff;
+          top: 0;
+          left: 0;
+          z-index: 1000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .loadingEffect {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          position: relative;
+          -webkit-animation: loadingAnimation 1s linear;
+          animation: loadingAnimation 1s linear;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .loadingEffect::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 1px dashed #0068b4;
+          border-radius: 50%;
+          -webkit-animation: loadingRotate 4s linear infinite;
+          animation: loadingRotate 4s linear infinite;
+        }
+
+        .loadingLogo {
+          position: absolute;
+          left: calc(50% - 87px);
+          top: calc(50% - 16.5px);
+        }
+
+        .loadingLogo {
+          width: 174px;
+          height: 33px;
+        }
+
+        .loadingNone {
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.4s ease-in-out;
+        }
+
+        @keyframes loadingAnimation {
+          0% {
+            transform: scale(0) rotate(90deg);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1) rotate(0);
+            opacity: 1;
+          }
+        }
+
+        @-webkit-keyframes loadingAnimation {
+          0% {
+            transform: scale(0) rotate(90deg);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1) rotate(0);
+            opacity: 1;
+          }
+        }
+
+        @-webkit-keyframes loadingRotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes loadingRotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+      <style type="text/css">
+        /*slider*/
+
+        /* Slideshow container */
+        #slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+
+        /* Next & previous buttons */
+        #prev,
+        #next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        #next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        #prev:hover,
+        #next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+
+        /* Number text (1/3 etc) */
+
+        /* The dots/bullets/indicators */
+
+        #active,
+        #dot:hover {
+          background-color: #717171;
+        }
+
+        /* Fading animation */
+        #fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+      </style>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    </head>
+  </head>
+
+  <body class="">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P87X3WQ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="mng-popup" style="display: none">
+      <div class="mng-popup-container">
+        <div class="popupContent">
+          <div class="exit">X</div>
+          <img
+            style="width: 100%"
+            src="https://mngkargo.com.tr/assets/img/content/sms_mail_dolandiricilik_pop_up.jpg"
+            class="popup-desktop"
+          />
+          <img
+            style="width: 100%"
+            src="https://mngkargo.com.tr/assets/img/content/sms_mail_dolandiricilik_pop_up_mobil.jpg"
+            class="popup-mobil"
+          />
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="loadingBox loadingNone">
+        <div class="loadingEffect">
+          <div class="loadingLogo">
+            <div
+              class="loadingLogo"
+              style="
+                background: url('https://mngkargo.com.tr/assets/sprite/logo.svg')
+                  no-repeat;
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="top">
+          <div class="container">
+            <div class="topBox">
+              <div class="left col-xl-6">
+                <a href="javascript:;" class="active" title=""
+                  ><span>Bireysel</span></a
+                >
+                <a href="#" title=""><span>Kurumsal</span></a>
+              </div>
+              <div class="right col-xl-6">
+                <a href="#" class="rightLink" title="">Müşterimiz Ol</a>
+                <a href="#" class="rightLink" title="">İş Ortağımız Ol</a>
+
+                <a href="#" class="signup-signin">
+                  <i
+                    class="img"
+                    style="background-image: url('./images/user10.jpg')"
+                  ></i>
+                  <i
+                    class="imgHover"
+                    style="background-image: url('./images/user_hover.jpg')"
+                  ></i>
+                  <span>Üye Girişi / Üye Ol</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="container">
+            <div class="bottomBox">
+              <div class="left">
+                <a href="#" class="logo">
+                  <img src="./images/logo.jpg" alt="MNG Kargo" />
+                </a>
+              </div>
+              <div class="center">
+                <div class="navigationLink">
+                  <a href="javascript:;">NAVİGASYON</a>
+                </div>
+                <ul class="menu_ul">
+                  <li class="menu_li">
+                    <a href="javascript:;" class="menu_link">Anasayfa</a>
+                  </li>
+                  <li class="menu_li li_open">
+                    <a href="javascript:;" class="menu_link"
+                      >Ürün ve Hizmetler</a
+                    >
+                    <div class="openMenu">
+                      <div class="openMenuContainer">
+                        <div class="menuColon subMenuLiOpen">
+                          <div class="iconBox">
+                            <i
+                              style="
+                                background-image: url('./images/menuServices_icon1.jpg');
+                              "
+                            ></i>
+                          </div>
+                          <div class="menuTitle">
+                            <a href="javacript:;">Yurtiçi Hizmetler</a>
+                          </div>
+                          <ul>
+                            <li>
+                              <a href="#">Teslimat Hizmetleri</a>
+                            </li>
+                            <li>
+                              <a href="#">Adresten Alım Hizmetleri</a>
+                            </li>
+                            <li>
+                              <a href="#">Özel Hizmetler</a>
+                            </li>
+                            <li>
+                              <a href="#">Sms Bilgilendirme Hizmetleri</a>
+                            </li>
+                            <li>
+                              <a href="#">Standart Fiyat Listesi</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="menuColon subMenuLiOpen">
+                          <div class="iconBox">
+                            <i
+                              style="
+                                background-image: url('./images/menuInternational_icon.jpg');
+                              "
+                            ></i>
+                          </div>
+                          <div class="menuTitle">
+                            <a href="javacript:;">Yurtdışı Hizmetler</a>
+                          </div>
+                          <ul>
+                            <li>
+                              <a href="#">INTER By MngKargo</a>
+                            </li>
+                            <li>
+                              <a href="#">Yurtdışı Fiyat Listesi</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="menuColon subMenuLiOpen">
+                          <div class="iconBox">
+                            <i
+                              style="
+                                background-image: url('./images/menuKobi_icon.jpg');
+                              "
+                            ></i>
+                          </div>
+                          <div class="menuTitle">
+                            <a href="javacript:;">KOBI Hizmetleri</a>
+                          </div>
+                          <ul>
+                            <li>
+                              <a href="#">Sigorta Hizmeti</a>
+                            </li>
+                            <li>
+                              <a href="#">Kobi Kart</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="menuColon">
+                          <div class="iconBox">
+                            <i
+                              style="
+                                background-image: url('./images/menuPackaging_icon.jpg');
+                              "
+                            ></i>
+                          </div>
+                          <div class="menuTitle">
+                            <a href="javacript:;">Paketleme Hizmetleri</a>
+                          </div>
+                          <ul>
+                            <li>
+                              <a href="">Paketleme Hizmetleri</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="menuColon subMenuLiOpen">
+                          <div class="iconBox">
+                            <i
+                              style="
+                                background-image: url('./images/menuPackaging_icon.jpg');
+                              "
+                            ></i>
+                          </div>
+                          <div class="menuTitle">
+                            <a href="javacript:;">Kurumsal Çözümler</a>
+                          </div>
+                          <ul>
+                            <li>
+                              <a href="#">E-Ticaret Entegrasyonu</a>
+                            </li>
+                            <li>
+                              <a href="#">Self Barkod</a>
+                            </li>
+                            <li>
+                              <a href="#">Tahsilatlı Gönderi</a>
+                            </li>
+                            <li>
+                              <a href="#">Raporlama Hizmeti</a>
+                            </li>
+                            <li>
+                              <a href="#">E-Fatura Sorgulama</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      class="border"
+                      style="background-image: url('./images/menuSub.jpg')"
+                    ></span>
+                  </li>
+                  <li class="menu_li">
+                    <a href="#" class="menu_link">Kampanyalar</a>
+                  </li>
+                  <li class="menu_li">
+                    <a href="#" class="menu_link">Gönderi Takip</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right">
+                <div class="menuIcon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="slider sliderOne">
+        <div class="slideshow-container" id="slidershow-container">
+          <div class="mySlides fade" id="fade">
+            <img src="./images/slider10.jpg" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade" id="fade">
+            <img src="./images/slider11.jpg" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade" id="fade">
+            <img src="./images/slider12.jpg" style="width: 100%" />
+          </div>
+
+          <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" id="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" id="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" id="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+              slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+          }
+        </script>
+
+        <!-- <div class="sliderBox">
+        <ul class="sliderUl flickity-enabled" data-carousel="" slidertime="5000" tabindex="0">
+                
+
+        <div class="flickity-viewport" style="touch-action: pan-y;"><div class="flickity-slider" style="left: 0px; transform: translateX(0%);"><li class="carousel-cell is-selected" style="background-image: url('./images/slider1.jpg'); 
+        position: absolute; left: 0%; background-position: 0px center;" slidertime="5000">
+
+                </li></div></div><ol class="flickity-page-dots"><li class="dot is-selected" aria-label="Page dot 1" aria-current="step"><div class="playDot"><canvas width="18" height="18"></canvas></div></li></ol></ul>
+    </div> -->
+
+        <div class="dispatchQueryBox">
+          <div class="container">
+            <div class="dispatchQuery">
+              <div class="dispatchQuery_Top">
+                <ul>
+                  <li class="active" style="width: 330px">
+                    <a href="javascript:;">
+                      <i
+                        class="search_parcel_icon"
+                        style="
+                          background-image: url('./images/search_parcel.jpg');
+                        "
+                      ></i>
+                      <i
+                        class="search_parcel_icon_hover"
+                        style="
+                          background-image: url('./images/search_parcel_hover.jpg');
+                        "
+                      ></i>
+                      <span style="font-size: 15px"
+                        >Gönderi Takip Numarası ile Sorgulama</span
+                      >
+                    </a>
+                  </li>
+                  <li style="width: 300px">
+                    <a href="javascript:;">
+                      <i
+                        class="dispatchQuery_icon"
+                        style="
+                          background-image: url('./images/dispatchQuery_icon.jpg');
+                        "
+                      ></i>
+                      <i
+                        class="dispatchQuery_icon_hover"
+                        style="
+                          background-image: url('./images/dispatchQuery_icon_hover.jpg');
+                        "
+                      ></i>
+                      <span style="font-size: 15px"
+                        >Sipariş Numarası ile Sorgulama</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dispatchQuery_Bottom">
+                <div class="tabBottomBox active" style="width: 99.7%">
+                  <div class="shipmentFormBox">
+                    <ul>
+                      <li>
+                        <form
+                          class="shipmentFormStandard"
+                          id="shipmentFormStandard"
+                          autocomplete="off"
+                          method="post"
+                          action="/gonderi-takip"
+                          novalidate="novalidate"
+                        >
+                          <div class="inputBox">
+                            <input
+                              type="text"
+                              class="form_shipment input-text"
+                              name="form_shipment"
+                              id="form_shipment"
+                              placeholder="Gönderi / Fatura Numarası"
+                              maxlength="12"
+                              minlength="6"
+                              required=""
+                            />
+                            <div
+                              class="questionCircleBox"
+                              style="
+                                background-image: url('./images/questionCircle_icon.jpg');
+                              "
+                            >
+                              <i></i>
+                              <span class="tooltipBox2"
+                                >Gönderi kaydı yapılan kargonun sistemde takibi
+                                için oluşturulan numaradır.<em></em
+                              ></span>
+                            </div>
+                          </div>
+
+                          <div class="linkBox">
+                            <a href="javascript:;"><span>Sorgula</span></a>
+                          </div>
+                        </form>
+                      </li>
+                      <li
+                        class="formLi formLiFull input-area"
+                        id="captchaArea1"
+                      >
+                        <div class="captcha-area" id="captcha1">
+                          <div class="captcha-img">
+                            <img
+                              src="./images/captcha.JPG"
+                              alt="Captch Background"
+                            />
+                            <span class="captcha"> S A L i H</span>
+                          </div>
+                          <input
+                            type="text"
+                            placeholder="Doğrulama Kodunu Giriniz"
+                            maxlength="4"
+                            spellcheck="false"
+                            required=""
+                          />
+
+                          <button class="reload-btn">
+                            <img src="./images/refresh.jpg" />
+                          </button>
+                        </div>
+                        <div class="status-text"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tabBottomBox" style="width: 99.7%">
+                  <div class="eticaretFormBox">
+                    <form
+                      class="shipmentFormEticaret"
+                      id="shipmentFormEticaret"
+                      autocomplete="off"
+                      action=""
+                      method="post"
+                      novalidate="novalidate"
+                    >
+                      <ul>
+                        <li>
+                          <div class="formColon">
+                            <select
+                              class="select_firm select_valid select2-hidden-accessible"
+                              name="companyCode"
+                              data-select2-id="1"
+                              tabindex="-1"
+                              aria-hidden="true"
+                            >
+                              <option value="" data-select2-id="3"></option>
+                              <option value="240688346">Loft</option>
+                              <option value="160963787">Adore Mobilya</option>
+                              <option value="324607998">Amazon Depo</option>
+                              <option value="142353328">
+                                Türk Telekom Callart
+                              </option>
+                              <option value="126654027">De Facto</option>
+                              <option value="137797661">Hepsi Burada</option>
+                              <option value="53617">Kitap Yurdu</option>
+                              <option value="40462464">Koton</option>
+                              <option value="268551072">Moda Selvim</option>
+                              <option value="460451167">Ofmark</option>
+                              <option value="146405879">Trendyol</option>
+                              <option value="147004529">Piranha Bilişim</option>
+                              <option value="285914675">Sefa Merve</option>
+                              <option value="195542503">Sözcü Kitabevi</option>
+                              <option value="354061327">Yataş</option>
+                              <option value="178513608">Colins</option>
+                              <option value="170770636">Çiçek Sepeti</option>
+                              <option value="210902698">Morhipo</option>
+                              <option value="379514749">Amazon</option>
+                              <option value="112384348">Gitti Gidiyor</option>
+                              <option value="179855886">N11</option>
+                              <option value="148934384">Vivense</option></select
+                            ><span
+                              class="select2 select2-container select2-container--default"
+                              dir="ltr"
+                              data-select2-id="2"
+                              style="width: 169px"
+                              ><span class="selection"
+                                ><span
+                                  class="select2-selection select2-selection--single"
+                                  role="combobox"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                  tabindex="0"
+                                  aria-disabled="false"
+                                  aria-labelledby="select2-companyCode-l2-container"
+                                  ><span
+                                    class="select2-selection__rendered"
+                                    id="select2-companyCode-l2-container"
+                                    role="textbox"
+                                    aria-readonly="true"
+                                    ><span
+                                      class="select2-selection__placeholder"
+                                      >Firma Seçiniz</span
+                                    ></span
+                                  ><span
+                                    class="select2-selection__arrow"
+                                    role="presentation"
+                                    style="
+                                      background-image: url('https://mngkargo.com.tr/assets/sprite/selectDown.svg');
+                                    "
+                                    ><b
+                                      role="presentation"
+                                    ></b></span></span></span
+                              ><span
+                                class="dropdown-wrapper"
+                                aria-hidden="true"
+                              ></span
+                            ></span>
+                          </div>
+                          <div class="formColon">
+                            <input
+                              type="tel"
+                              class="form_eticaret input-text"
+                              name="takipNo"
+                              id="form_eticaret"
+                              placeholder="Sipariş Takip No"
+                              maxlength="17"
+                              minlength="3"
+                              required=""
+                            />
+                          </div>
+
+                          <div class="linkBox">
+                            <a href="javascript:;"><span>Sorgula</span></a>
+                          </div>
+                        </li>
+                        <li class="input-area" id="captchaArea2">
+                          <div class="captcha-area" id="captcha2">
+                            <div class="captcha-img">
+                              <img
+                                src="./images/captcha.jpg"
+                                alt="Captch Background"
+                              />
+                              <span class="captcha">S A L İ H</span>
+                            </div>
+                            <input
+                              type="text"
+                              placeholder="Doğrulama Kodunu Giriniz"
+                              maxlength="4"
+                              spellcheck="false"
+                              required=""
+                            />
+
+                            <button class="reload-btn">
+                              <img src="./images/refresh.jpg" />
+                            </button>
+                          </div>
+                          <div class="status-text"></div>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="specificationsBox">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i
+                      style="
+                        background-image: url('https://mngkargo.com.tr/assets/sprite/price_icon.svg');
+                      "
+                    ></i
+                    ><span>Ücret</span>
+                    <span>Hesapla</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i
+                      style="
+                        background-image: url('https://mngkargo.com.tr/assets/sprite/courier_icon.svg');
+                      "
+                    ></i
+                    ><span>Kurye</span>
+                    <span>Çağır</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i
+                      style="
+                        background-image: url('https://mngkargo.com.tr/assets/sprite/delivery_icon.svg');
+                      "
+                    ></i
+                    ><span>Teslimat</span>
+                    <span>Noktaları</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="homeCampaing owl-carousel">
+          <div class="colon">
+            <div id="homeEffectImgBox-1"></div>
+            <i
+              class="colonEffectImg-1"
+              style="background-image: url('./images/MNG_icon.jpg')"
+            ></i>
+            <div class="container">
+              <div class="box">
+                <div class="left">
+                  <div class="title">Türk Telekom Bireysel</div>
+                  <div class="desc">
+                    Türk Telekom mobil hat, evde internet ve evde telefon
+                    aboneleri MNG Kargo’dan yapacakları gönderilerde %30
+                    indirimden yararlanıyor.
+                  </div>
+                  <div class="linkBox">
+                    <a href="/kampanya-duyuru/e-ticaret-iade-kampanyasi"
+                      ><span
+                        >Detaylı Bilgi
+                        <i
+                          style="
+                            background-image: url('https://mngkargo.com.tr/assets/sprite/next.svg');
+                          "
+                        ></i></span
+                    ></a>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="imgBox">
+                    <img
+                      src="https://mngkargo.com.tr/uploads/HomePageAnnouncementsImages/turk-telekom-bireysel_20D7F11F-78AB-4202-A2EF-7BC1C6752286_D3212E71-6B05-48D4-AE35-B450F6B0A35B.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colon">
+            <div id="homeEffectImgBox-2"></div>
+            <i
+              class="colonEffectImg-2"
+              style="
+                background-image: url('https://mngkargo.com.tr/assets/img/MNG_icon.svg');
+              "
+            ></i>
+            <div class="container">
+              <div class="box">
+                <div class="left">
+                  <div class="title">Eğitime Destek Kampanyası</div>
+                  <div class="desc">
+                    Tüm Türkiye genelinde okul ve okul yurtlarına yapılan
+                    kırtasiye, giysi vb yardım gönderilerinde müşterilerimize
+                    özel indirimli fiyatlar sunuyoruz.
+                  </div>
+                  <div class="linkBox">
+                    <a href="#"
+                      ><span
+                        >Detaylı Bilgi
+                        <i
+                          style="
+                            background-image: url('https://mngkargo.com.tr/assets/sprite/next.svg');
+                          "
+                        ></i></span
+                    ></a>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="imgBox">
+                    <img
+                      src="https://mngkargo.com.tr/uploads/HomePageAnnouncementsImages/ana sayfa kampanya egitime desrek_AFF5FAD6-AF15-4DF0-B5AF-05D24E034E3D.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="colon">
+            <div id="homeEffectImgBox-3"></div>
+            <i
+              class="colonEffectImg-3"
+              style="
+                background-image: url('https://mngkargo.com.tr/assets/img/MNG_icon.svg');
+              "
+            ></i>
+            <div class="container">
+              <div class="box">
+                <div class="left">
+                  <div class="title">Barınak Kampanyası</div>
+                  <div class="desc">
+                    Barınak kampanyası kapsamında Türkiye’nin her yerindeki
+                    hayvan barınaklarına yapacağınız yardım gönderilerine özel
+                    indirimli fiyatlar sunuyoruz.
+                  </div>
+                  <div class="linkBox">
+                    <a href="#"
+                      ><span
+                        >Detaylı Bilgi
+                        <i
+                          style="
+                            background-image: url('https://mngkargo.com.tr/assets/sprite/next.svg');
+                          "
+                        ></i></span
+                    ></a>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="imgBox">
+                    <img
+                      src="https://mngkargo.com.tr/uploads/HomePageAnnouncementsImages/ana-sayfa-kampanya-barinak-kampanyası_A16B9331-CC10-41C5-AD54-9B16C4560779.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="homeMngInfo">
+          <div id="homeEffectImgBox2"></div>
+          <div class="homeMngInfoColon">
+            <div class="infoBox">
+              <div class="container">
+                <div class="left">
+                  <div class="iconBox">
+                    <a href="#" data-fancybox="">
+                      <div
+                        class="ytsmall"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/video_icon.svg');
+                        "
+                      ></div>
+                      <div class="ytmedium"></div>
+                      <div class="ytbig"></div>
+                    </a>
+                  </div>
+                  <div class="subtitle">
+                    MNG Kargo Yurtiçi ve Yurtdışı Taşımacılık A.Ş.
+                  </div>
+                  <div class="title">
+                    Sektörde ilk Teknolojik Aktarma Merkezlerine Sahip Kargo
+                    Şirketi!
+                  </div>
+                  <div class="leftBottomBox">
+                    <ul>
+                      <li>
+                        <a href="#">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/courier_icon.svg');
+                            "
+                          ></i
+                          ><span>Kurye</span>
+                          <span>Çağır</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/search_parcel_white.svg');
+                            "
+                          ></i
+                          ><span>Gönderim</span>
+                          <span>Nerede?</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="right">
+                  <ul class="owl-carousel">
+                    <li>
+                      <div class="iconBox">
+                        <i
+                          style="
+                            background-image: url('https://mngkargo.com.tr/assets/img/piece_icon.png');
+                          "
+                        ></i>
+                      </div>
+                      <div class="title">700.000</div>
+                      <div class="desc">Günlük Kargo Adeti</div>
+                    </li>
+                    <li>
+                      <div class="iconBox">
+                        <i
+                          style="
+                            background-image: url('https://mngkargo.com.tr/assets/img/loyalCustomer_icon.png');
+                          "
+                        ></i>
+                      </div>
+                      <div class="title">12.000 +</div>
+                      <div class="desc">Çalışan</div>
+                    </li>
+                    <li>
+                      <div class="iconBox">
+                        <i
+                          style="
+                            background-image: url('https://mngkargo.com.tr/assets/img/way_icon.png');
+                          "
+                        ></i>
+                      </div>
+                      <div class="title">850'den</div>
+                      <div class="desc">Fazla Şube</div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="lineColon">
+                  <div
+                    class="lineBg1"
+                    style="
+                      background-image: url('https://mngkargo.com.tr/assets/sprite/infoLine1.svg');
+                    "
+                  ></div>
+                  <div
+                    class="lineBg2"
+                    style="
+                      background-image: url('https://mngkargo.com.tr/assets/sprite/infoLine2.svg');
+                    "
+                  ></div>
+                  <div class="lineContainer">
+                    <div class="lineBox lineBox-1">
+                      <div class="lineIcon">
+                        <span class="small"></span>
+                        <span class="medium"></span>
+                        <span class="big"></span>
+                        <div class="lineTooltip">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/lineSub.svg');
+                            "
+                          ></i>
+                          <strong>850’den</strong> fazla şube
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lineBox lineBox-2">
+                      <div class="lineIcon">
+                        <span class="small"></span>
+                        <span class="medium"></span>
+                        <span class="big"></span>
+                        <div class="lineTooltip">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/lineSub.svg');
+                            "
+                          ></i>
+                          <strong>27</strong> aktarma merkezi
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lineBox lineBox-3">
+                      <div class="lineIcon">
+                        <span class="small"></span>
+                        <span class="medium"></span>
+                        <span class="big"></span>
+                        <div class="lineTooltip">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/lineSub.svg');
+                            "
+                          ></i>
+                          <strong>14</strong> bölge müdürlüğü
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lineBox lineBox-4">
+                      <div class="lineIcon">
+                        <span class="small"></span>
+                        <span class="medium"></span>
+                        <span class="big"></span>
+                        <div class="lineTooltip">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/lineSub.svg');
+                            "
+                          ></i>
+                          Kendi bünyesi ve acentelerinde toplam
+                          <strong>12.000</strong> çalışan
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lineBox lineBox-5">
+                      <div class="lineIcon">
+                        <span class="small"></span>
+                        <span class="medium"></span>
+                        <span class="big"></span>
+                        <div class="lineTooltip">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/lineSub.svg');
+                            "
+                          ></i>
+                          <strong>3200</strong> kara taşıma aracı
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lineBox lineBox-6">
+                      <div class="lineIcon">
+                        <span class="small"></span>
+                        <span class="medium"></span>
+                        <span class="big"></span>
+                        <div class="lineTooltip">
+                          <i
+                            style="
+                              background-image: url('https://mngkargo.com.tr/assets/sprite/lineSub.svg');
+                            "
+                          ></i>
+                          <strong>220</strong> ülkeye hizmet
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="titleBox">
+            <div class="title">
+              <a href="#">MNG Kargo İle Para Kazanmanın Yolları</a>
+            </div>
+            <div class="desc">
+              Siz de MNG Kargo ailesine katılın, kargo sektörünün güçlü
+              markasının sağladığı cazip fırsatlar ve kazanç imkanlarından
+              yararlanın.
+            </div>
+          </div>
+        </div>
+        <div
+          class="homeMngMoney"
+          style="
+            background-image: url('https://mngkargo.com.tr/assets/img/moneyBgBottom_icon.png');
+          "
+        >
+          <span
+            class="moneyTop_icon"
+            style="
+              background-image: url('https://mngkargo.com.tr/assets/img/moneyBg_icon.svg');
+            "
+          ></span>
+          <div class="container">
+            <div class="row">
+              <div class="moneyBox">
+                <ul class="moneyList owl-carousel">
+                  <li>
+                    <div class="box">
+                      <a href="#">
+                        <div class="imgBox">
+                          <div
+                            class="bgImage"
+                            style="
+                              background-image: url('https://mngkargo.com.tr/uploads/WaysToMakeMoneyHomePageImages/homeMoneyImg1 (1)_8F3E5642-D09D-4F42-845B-D98E8FF768DB_109131DB-2722-4755-AE3A-65DA2A937DC6.png');
+                            "
+                          ></div>
+                        </div>
+                        <div class="textBox">
+                          <div class="title">Acentemiz Ol</div>
+                          <div class="desc">
+                            Kendi işinin sahibi olmak isteyen girişimcileri
+                            acentemiz olmaya davet ediyoruz.
+                          </div>
+                          <div class="linkBox">
+                            <span>DETAYLI BİLGİ</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="box">
+                      <a href="#">
+                        <div class="imgBox">
+                          <div
+                            class="bgImage"
+                            style="
+                              background-image: url('https://mngkargo.com.tr/uploads/WaysToMakeMoneyHomePageImages/homeMoneyImg3 (1)_070A0CF1-6902-42E1-94C0-CA2E49C4357E_E811667F-4597-47C0-A285-3E0FDD184C39.png');
+                            "
+                          ></div>
+                        </div>
+                        <div class="textBox">
+                          <div class="title">Girişimci Kurye Ol</div>
+                          <div class="desc">
+                            Kendi aracıyla dağıtım yaparak gelir elde etmek
+                            isteyenlere fırsatlar sunuyoruz.
+                          </div>
+                          <div class="linkBox">
+                            <span>DETAYLI BİLGİ</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="box">
+                      <a href="#">
+                        <div class="imgBox">
+                          <div
+                            class="bgImage"
+                            style="
+                              background-image: url('https://mngkargo.com.tr/uploads/WaysToMakeMoneyHomePageImages/homeMoneyImg2 (1)_29C20ACD-C4E3-4C92-9ED1-9DDE6D7F63DC_49CBD7E8-AEA2-4E1D-A847-EB40FED41148.png');
+                            "
+                          ></div>
+                        </div>
+                        <div class="textBox">
+                          <div class="title">Reklam Ver</div>
+                          <div class="desc">
+                            <p>
+                              Kargo poşetlerimize reklam veren markaları her gün
+                              yüz binlerce kullanıcıya taşıyoruz.
+                            </p>
+                          </div>
+                          <div class="linkBox">
+                            <span>DETAYLI BİLGİ</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrollDown"><span></span></div>
+        <div class="modalBox warningBox surveyFormModal" id="surveyFormModal">
+          <div class="top">
+            <div class="title">Memnuniyet Anketi</div>
+            <form
+              autocomplete="off"
+              id="surveyForm"
+              class="surveyForm"
+              novalidate="novalidate"
+            >
+              <ul class="formUl">
+                <li class="formLi formLi_webSiteNew">
+                  <div class="number">1</div>
+                  <div class="formTitle">
+                    Yenilenen web sitemizin sunduğu fonksiyonlardan memnun
+                    musunuz?<br />Değilse nedenini belirtebilir misiniz?
+                  </div>
+                  <div class="inputBox inputRadioBox">
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_1"
+                        name="radioId_TrueFalse"
+                        value="Evet"
+                        checked=""
+                      />
+                      <label for="radioId_1">Evet</label>
+                    </div>
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_2"
+                        name="radioId_TrueFalse"
+                        value="Hayır"
+                      />
+                      <label for="radioId_2">Hayır</label>
+                    </div>
+                  </div>
+                  <div class="inputBox inputBoxMessage" style="display: none">
+                    <textarea
+                      class="inputTextArea form_message"
+                      name="form_message"
+                      id="form_message"
+                      placeholder="Mesajınız..."
+                      maxlength="150"
+                    ></textarea>
+                  </div>
+                </li>
+                <li class="formLi formLi_product">
+                  <div class="number">2</div>
+                  <div class="formTitle">
+                    Ürünlerimizi ve hizmetlerimizi ilk kez mi kullanıyorsunuz?
+                  </div>
+                  <div class="inputBox inputRadioBox">
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_3"
+                        name="radioId2_TrueFalse"
+                        value="Evet"
+                      />
+                      <label for="radioId_3">Evet</label>
+                    </div>
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_4"
+                        name="radioId2_TrueFalse"
+                        value="Hayır"
+                        checked=""
+                      />
+                      <label for="radioId_4">Hayır</label>
+                    </div>
+                  </div>
+                </li>
+                <li class="formLi">
+                  <div class="number">3</div>
+                  <div class="formTitle">
+                    Size hizmet veren saha operasyon elemanımızdan memnun
+                    kaldınız mı?<br />1 (en düşük) ile 5 (en yüksek) arasında
+                    puanlar mısınız?
+                  </div>
+                  <div class="starBox">
+                    <span class="starIcon active" data-value="1">1</span>
+                    <span class="starIcon active" data-value="2">2</span>
+                    <span class="starIcon active" data-value="3">3</span>
+                    <span class="starIcon active" data-value="4">4</span>
+                    <span class="starIcon" data-value="5">5</span>
+                  </div>
+                </li>
+                <li class="formLi">
+                  <div class="number">4</div>
+                  <div class="formTitle">
+                    MNG Kargo tarafından teslim edilen kargonuz ile ilgili
+                    yaşadığınız deneyimi çevrenize ve arkadaşlarınıza ne ölçüde
+                    tavsiye edersiniz?  0 (hiç tavsiye etmem) ile 10 (çok
+                    tavsiye ederim) arasında puanlar mısınız?
+                  </div>
+                  <div class="inputBox">
+                    <div class="rangeBox">
+                      <input
+                        type="range"
+                        id="mostRange"
+                        class="rangeInput"
+                        value="8"
+                        min="0"
+                        max="10"
+                        readonly=""
+                      />
+                      <div id="slider-range-min" class="sliderRange"></div>
+
+                      <div class="rangeNew">
+                        <div class="iconBox" data-value="0">
+                          <i></i>
+                          <span>0</span>
+                        </div>
+                        <div class="iconBox" data-value="1">
+                          <i></i>
+                          <span>1</span>
+                        </div>
+                        <div class="iconBox" data-value="2">
+                          <i></i>
+                          <span>2</span>
+                        </div>
+                        <div class="iconBox" data-value="3">
+                          <i></i>
+                          <span>3</span>
+                        </div>
+                        <div class="iconBox" data-value="4">
+                          <i></i>
+                          <span>4</span>
+                        </div>
+                        <div class="iconBox" data-value="5">
+                          <i></i>
+                          <span>5</span>
+                        </div>
+                        <div class="iconBox" data-value="6">
+                          <i></i>
+                          <span>6</span>
+                        </div>
+                        <div class="iconBox" data-value="7">
+                          <i></i>
+                          <span>7</span>
+                        </div>
+                        <div class="iconBox active" data-value="8">
+                          <i></i>
+                          <span>8</span>
+                        </div>
+                        <div class="iconBox" data-value="9">
+                          <i></i>
+                          <span>9</span>
+                        </div>
+                        <div class="iconBox" data-value="10">
+                          <i></i>
+                          <span>10</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="formLi formLi_webSite">
+                  <div class="number">5</div>
+                  <div class="formTitle">
+                    Web sitemizin kullanımını genel olarak nasıl buldunuz?
+                  </div>
+                  <div class="inputBox inputRadioBox">
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_cokiyi"
+                        name="radioId_General"
+                        value="Çok İyi"
+                      />
+                      <label for="radioId_cokiyi">Çok İyi</label>
+                    </div>
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_iyi"
+                        name="radioId_General"
+                        value="İyi"
+                        checked=""
+                      />
+                      <label for="radioId_iyi">İyi</label>
+                    </div>
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_ortalama"
+                        name="radioId_General"
+                        value="Ortalama"
+                      />
+                      <label for="radioId_ortalama">Ortalama</label>
+                    </div>
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_kotu"
+                        name="radioId_General"
+                        value="Kötü"
+                      />
+                      <label for="radioId_kotu">Kötü</label>
+                    </div>
+                    <div class="radioColon">
+                      <input
+                        type="radio"
+                        class="inputRadioBox"
+                        id="radioId_cokkotu"
+                        name="radioId_General"
+                        value="Çok Kötü"
+                      />
+                      <label for="radioId_cokkotu">Çok Kötü</label>
+                    </div>
+                  </div>
+                </li>
+                <li class="formLi formLiLink">
+                  <div class="linkBox">
+                    <a href="javascript:;" class="sendFormButton"
+                      ><span>Gönder <i></i></span
+                    ></a>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div class="modalBox warningBox surveySucces" id="surveySucces">
+          <div class="top">
+            <div class="iconBox">
+              <i></i>
+            </div>
+            <div class="title">
+              Anket yanıtlarınız tarafımıza ulaşmıştır.<br />Teşekkür ederiz.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modalBox warningBox warningError loginError" id="loginError">
+        <div class="top">
+          <div class="iconBox">
+            <i></i>
+          </div>
+          <div class="title"></div>
+          <div class="linkBox">
+            <a href="javascript:$.fancybox.close();" class="emailLink"
+              ><span>Tekrar Dene<i></i></span
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="container">
+            <div class="topBox">
+              <div class="left">
+                <div class="iconBox">
+                  <i
+                    style="background-image: url('./images/online_store.png')"
+                  ></i>
+                </div>
+                <div class="textBox">
+                  <div class="title">MNG Kargo Online Şube</div>
+                  <div class="desc">
+                    Tüm kargo işlemlerinizi tek bir platform üzerinden kolayca
+                    yönetebilirsiniz.
+                  </div>
+                  <div class="linkBox">
+                    <a href="#" class="online_link"
+                      ><i
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/online_link.svg');
+                        "
+                      ></i
+                      ><span>Online Şubeye Giriş</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <div class="iconBox">
+                  <i
+                    style="background-image: url('./images/tazmin_form10.jpg')"
+                  ></i>
+                </div>
+                <div class="textBox">
+                  <div class="title">Hasar Tazmin Formu</div>
+                  <div class="desc">
+                    Taşıma esnasında zarar gören kargolarınız için tazmin
+                    talebinde bulunabilirsiniz.
+                  </div>
+                  <div class="linkBox">
+                    <a href="#" class="tazmin_link"
+                      ><i
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/tazmin_link.svg');
+                        "
+                      ></i
+                      ><span>Hasar Tazmin Formu Doldur</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <div class="container">
+            <div class="bottomTop">
+              <div class="whatsappBox col-xl-3">
+                <a href="#" target="_blank">
+                  <i
+                    style="background-image: url('./images/whatsapp1.jpg')"
+                  ></i>
+                  <div class="title">WhatsApp</div>
+                  <div class="desc">İletişim Hattı</div>
+                </a>
+              </div>
+
+              <div class="socialMedia col-xl-6">
+                <ul>
+                  <li>
+                    <a href="#" target="_blank" class="facebook">
+                      <i
+                        class="img"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/facebook_icon.svg');
+                        "
+                      ></i>
+                      <i
+                        class="imgHover"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/facebook_icon_hover.svg');
+                        "
+                      ></i>
+                      <span class="tooltip">Facebook<em></em></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="twitter">
+                      <i
+                        class="img"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/twitter_icon.svg');
+                        "
+                      ></i>
+                      <i
+                        class="imgHover"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/twitter_icon_hover.svg');
+                        "
+                      ></i>
+                      <span class="tooltip">Twitter<em></em></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="instagram">
+                      <i
+                        class="img"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/instagram_icon.svg');
+                        "
+                      ></i>
+                      <i
+                        class="imgHover"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/instagram_icon_hover.svg');
+                        "
+                      ></i>
+                      <span class="tooltip">Instagram<em></em></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="youtube">
+                      <i
+                        class="img"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/youtube_icon.svg');
+                        "
+                      ></i>
+                      <i
+                        class="imgHover"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/youtube_icon_hover.svg');
+                        "
+                      ></i>
+                      <span class="tooltip">Youtube<em></em></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" class="linkedin">
+                      <i
+                        class="img"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/linkedin_icon.svg');
+                        "
+                      ></i>
+                      <i
+                        class="imgHover"
+                        style="
+                          background-image: url('https://mngkargo.com.tr/assets/sprite/linkedin_icon_hover.svg');
+                        "
+                      ></i>
+                      <span class="tooltip">Linkedin<em></em></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="emailBox col-xl-3">
+                <a href="#">
+                  <div class="title">info@mngkargo.com.tr</div>
+                  <div class="desc">E-mail gönder</div>
+                </a>
+              </div>
+            </div>
+            <div class="bottomCenter">
+              <div class="bottomCenterMngCargo col-xl-9">
+                <div class="title">MNG Kargo</div>
+                <ul>
+                  <li>
+                    <a href="# ">Sosyal Sorumluluklar</a>
+                  </li>
+                  <li>
+                    <a href="# ">Hakkımızda</a>
+                  </li>
+                  <li>
+                    <a href="#">Kuzey Kıbrıs</a>
+                  </li>
+                  <li>
+                    <a href="#">Kişisel Verilerin Korunması</a>
+                  </li>
+                  <li>
+                    <a href="#">Hukuksal Metinler</a>
+                  </li>
+                  <li>
+                    <a href="#">Basın Odası</a>
+                  </li>
+                  <li>
+                    <a href="#">İnsan Kaynakları</a>
+                  </li>
+                  <li>
+                    <a href="#">Gönderi Rehberi</a>
+                  </li>
+                  <li>
+                    <a href="#">Bilgi Hizmetleri</a>
+                  </li>
+                  <li>
+                    <a href="#">Kalite Politikamız</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="bottomCenterContact col-xl-3">
+                <div class="title">Bize Ulaşın</div>
+                <ul>
+                  <li>
+                    <a href="#">İletişim</a>
+                  </li>
+                  <li>
+                    <a href="#">Öneri, İstek ve Şikayet Formu</a>
+                  </li>
+                  <li>
+                    <a href="#">Minihub</a>
+                  </li>
+                  <li>
+                    <a href="#">Müşteri Memnuniyeti</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="bottomBottom">
+              <div class="footerLogoBox col-xl-3">
+                <a href="javascript:;">
+                  <img src="./images/logoFooter.jpg" alt="MNG Kargo" />
+                </a>
+              </div>
+              <div class="copyrightBox col-xl-6">
+                <div class="copyText">
+                  2020 © MNG Kargo A.Ş | Her Hakkı Saklıdır.
+                </div>
+              </div>
+              <div class="desingedDNB col-xl-3">
+                <div class="desingText">
+                  Design and Development By
+                  <a href="#" target="_blank">Dreams&amp;Bytes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="scrollUp">
+        <svg
+          class="scrollCircle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path
+            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+            style="
+              transition: stroke-dashoffset 10ms linear 0s;
+              stroke-dasharray: 307.919, 307.919;
+              stroke-dashoffset: 307.919;
+            "
+          ></path>
+        </svg>
+        <i style="background-image: url('./images/updown.jpg')"></i>
+      </div>
+
+      <div class="cookieBox">
+        <div class="cookieText">
+          <div class="cookieTitle">Çerez Politikası</div>
+          <div class="cookieDesc">
+            İnternet sitemizde Çerezler kullanılmaktadır. Çerezler, internet
+            sitemizin kullanımını, işlevselliğini, kullanıcı deneyimini
+            geliştirmenin yanı sıra, analitik, reklam ve sosyal medya
+            özellikleri sunmak için kullanılır. Tarayıcınızdan Çerez
+            ayarlarınızı değiştirmeden bu siteyi kullanmaya devam ettiğiniz
+            sürece Çerezlerin kullanımını kabul etmiş sayılırsınız. KVKK
+            gizlilik politikası ve aydınlatma metnine ise "Detay Bilgi"
+            linkinden ulaşabilirsiniz.
+          </div>
+        </div>
+        <div class="linkBox">
+          <a href="#" class="detailLink">Detaylı Bilgi</a>
+          <a href="javascript:;" class="cookieLink">Kabul Ediyorum</a>
+        </div>
+        <a href="javascript:;" class="closed"></a>
+      </div>
+    </main>
+
+    <link
+      rel="preload"
+      href="https://mngkargo.com.tr/assets/js/master.min.js"
+      as="script"
+    />
+    <script
+      src="https://mngkargo.com.tr/assets/js/master.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script></script>
+
+    <script>
+      $(document).ready(function () {
+        if (
+          sessionStorage.getItem("pop-up") == null ||
+          sessionStorage.getItem("pop-up") == "null"
+        ) {
+          sessionStorage.setItem("pop-up", "1");
+          $("#mng-popup").css("display", "block");
+        } else {
+          $("#mng-popup").css("display", "none");
+        }
+
+        $(".exit").click(function () {
+          $("#mng-popup").css("display", "none");
+        });
+
+        $(document).keyup(function (e) {
+          if (e.keyCode === 27) $("#mng-popup").css("display", "none"); // esc
+        });
+        $("#mng-popup, .mng-popup-container").click(function (e) {
+          if (e.target !== this) return;
+          $("#mng-popup").css("display", "none");
+        });
+      });
+    </script>
+
+    <div
+      style="display: none"
+      class="ubey-RecordingScreen-count-down ubey-RecordingScreen-count-down-container"
+    >
+      <style>
+        .ubey-RecordingScreen-count-down-container {
+          position: fixed;
+          height: 100vh;
+          width: 100vw;
+          top: 0;
+          left: 0;
+          z-index: 9999999999999;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .ubey-RecordingScreen-count-down-content {
+          position: absolute;
+          display: flex;
+          top: 50%;
+          left: 50%;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          height: 15em;
+          width: 15em;
+          transform: translate(-50%, -100%);
+          background-color: rgba(0, 0, 0, 0.6);
+          border-radius: 50%;
+        }
+
+        #ubey-RecordingScreen-count-count {
+          font-size: 14em;
+          transform: translateY(-2%);
+        }
+      </style>
+      <div class="ubey-RecordingScreen-count-down-content">
+        <span id="ubey-RecordingScreen-count-count"></span>
+      </div>
+    </div>
+    <script type="text/javascript" id="gtm-jq-ajax-listen">
+      (function () {
+        function h(b) {
+          "undefined" !== typeof jQuery
+            ? ((k = jQuery), n())
+            : 20 > b && setTimeout(h, 500);
+        }
+        function n() {
+          k(document).bind("ajaxComplete", function (b, a, f) {
+            var c = document.createElement("a");
+            c.href = f.url;
+            var g = "/" === c.pathname[0] ? c.pathname : "/" + c.pathname,
+              d = "?" === c.search[0] ? c.search.slice(1) : c.search;
+            d = l(d, "\x26", "\x3d", !0);
+            var e = l(a.getAllResponseHeaders(), "\n", ":");
+            dataLayer.push({
+              event: "ajaxComplete",
+              attributes: {
+                type: f.type || "",
+                url: c.href || "",
+                queryParameters: d,
+                pathname: g || "",
+                hostname: c.hostname || "",
+                protocol: c.protocol || "",
+                fragment: c.hash || "",
+                statusCode: a.status || "",
+                statusText: a.statusText || "",
+                headers: e,
+                timestamp: b.timeStamp || "",
+                contentType: f.contentType || "",
+                response:
+                  a.responseJSON || a.responseXML || a.responseText || "",
+              },
+            });
+          });
+        }
+        function l(b, a, f, c) {
+          var g = {};
+          if (!b || !a || !f) return {};
+          if ((b = b.split(a)))
+            for (a = 0; a < b.length; a++) {
+              var d = c ? decodeURIComponent(b[a]) : b[a],
+                e = d.split(f);
+              d = m(e[0]);
+              e = m(e[1]);
+              d && e && (g[d] = e);
+            }
+          return g;
+        }
+        function m(b) {
+          if (b) return b.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
+        }
+        var k;
+        h();
+      })();
+    </script>
+    <script type="text/javascript" id="">
+      !(function (b, e, f, g, a, c, d) {
+        b.fbq ||
+          ((a = b.fbq =
+            function () {
+              a.callMethod
+                ? a.callMethod.apply(a, arguments)
+                : a.queue.push(arguments);
+            }),
+          b._fbq || (b._fbq = a),
+          (a.push = a),
+          (a.loaded = !0),
+          (a.version = "2.0"),
+          (a.queue = []),
+          (c = e.createElement(f)),
+          (c.async = !0),
+          (c.src = g),
+          (d = e.getElementsByTagName(f)[0]),
+          d.parentNode.insertBefore(c, d));
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "151077180530524");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=151077180530524&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <style>
+      .tb_button {
+        padding: 1px;
+        cursor: pointer;
+        border-right: 1px solid #8b8b8b;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+      }
+      .tb_button.hover {
+        border: 2px outset #def;
+        background-color: #f8f8f8 !important;
+      }
+      .ws_toolbar {
+        z-index: 100000;
+      }
+      .ws_toolbar .ws_tb_btn {
+        cursor: pointer;
+        border: 1px solid #555;
+        padding: 3px;
+      }
+      .tb_highlight {
+        background-color: yellow;
+      }
+      .tb_hide {
+        visibility: hidden;
+      }
+      .ws_toolbar img {
+        padding: 2px;
+        margin: 0px;
+      }
+    </style>
+  </body>
+</html>

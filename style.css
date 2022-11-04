@@ -1,0 +1,781 @@
+main {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+.loadingNone {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+.loadingBox {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loadingEffect {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    -webkit-animation: loadingAnimation 1s linear;
+    animation: loadingAnimation 1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loadingLogo {
+    width: 174px;
+    height: 33px;
+    background: url(https://mngkargo.com.tr/assets/sprite/logo.svg)no-repeat;
+    position: absolute;
+    left: calc(50% - 87px);
+    top: calc(50% - 16.5px);
+}
+main header .header {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+main header.header .top {
+    width: 100%;
+    height: 60px;
+    
+    display: flex;
+    background: linear-gradient(
+180deg, #FF8A00 0%, #FF5C00 100%);
+}
+.container {
+    width: 1180px;
+    margin: 0;
+}
+main header.header .top .topBox {
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+}
+main header.header .top .topBox .left {
+    height: 100%;
+    padding: 0;
+   
+    display: flex;
+}
+main header.header .top .topBox .left a.active {
+    color: #343434;
+}
+main header.header .top .topBox .left a span {
+    position: relative;
+    z-index: 2;
+}
+main header.header .top .topBox .right .signup-signin span {
+    position: relative;
+    z-index: 2;
+}
+main header.header .top .topBox .left a {
+    padding: 0 50px;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+main header.header .top .topBox .right {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main header.header .top .topBox .right .rightLink {
+    margin: 0 30px 0 0;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+main header.header .top .topBox .right .signup-signin {
+    border: 2px solid #FFFFFF;
+    border-radius: 3px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 30px 0 45px;
+    color: #fff;
+    font-size: 16px;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+   
+}
+main header.header .top .topBox .right .signup-signin i {
+     background-image: url(https://mngkargo.com.tr/assets/sprite/user.svg);
+    content: '';
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background-repeat: no-repeat;
+    z-index: 2;
+      transition-property: all;
+      transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+    
+}
+main header.header .top .topBox .right .signup-signin .imgHover {
+    background-image: url(https://mngkargo.com.tr/assets/sprite/user_hover.svg);
+    display: none;
+}
+main header.header .bottom {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background: #fff;
+}
+main header.header .bottom .bottomBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+main header.header .bottom .bottomBox .left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main header.header .bottom .bottomBox .left a {
+    display: flex;
+}
+a {
+    text-decoration: none;
+}
+main header.header .bottom .bottomBox .left a img {
+    width: 173px;
+    height: 32px;
+}
+main header.header .bottom .bottomBox .center {
+    width: 100%;
+    display: flex;
+    padding: 0 200px;
+}
+main header.header .bottom .bottomBox .center .navigationLink {
+    display: none;
+}
+main header.header .bottom .bottomBox .center .menu_ul {
+    width: 100%;
+   
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li:first-child {
+    display: none;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .menu_link {
+    color: #343434;
+    font-size: 16px;
+    position: relative;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    padding: 27px 0 27px 0;
+    font-family: 'interMedium';
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li {
+    margin: 0 30px;
+    overflow: hidden;
+  
+    display: flex;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer {
+    width: 1280px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: flex;
+    padding: 30px 15px 30px 0;
+    border-top: 1px solid #E5E5E5;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 10%);
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon {
+    width: 20%;
+    padding: 0 15px 0 30px;
+    border-right: 1px solid #E5E5E5;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .iconBox {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    margin: 0 0 15px 0;
+}
+
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .iconBox i {
+    background-image: url(https://mngkargo.com.tr/assets/sprite/menuServices_icon.svg);
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .menuTitle {
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .menuTitle a {
+    font-size: 16px;
+    line-height: 19px;
+    color: #343434;
+    font-family: 'interMedium';
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon ul {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon ul li {
+    width: 100%;
+    margin: 10px 0;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon ul li a {
+    font-size: 14px;
+    color: #575757;
+    position: relative;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    font-family: 'interLight';
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .iconBox {
+    width: 100%;
+    display: flex;
+    margin: 0 0 15px 0;
+}
+
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .iconBox i {
+    background-image: url(https://mngkargo.com.tr/assets/sprite/menuInternational_icon.svg);
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon .menuTitle a {
+    font-size: 16px;
+    line-height: 19px;
+    color: #343434;
+    font-family: 'interMedium';
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon ul {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon:last-child {
+    border: none;
+}
+
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .openMenu .openMenuContainer .menuColon ul li a {
+    font-size: 14px;
+    color: #575757;
+    position: relative;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    font-family: 'interLight';
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li {
+    margin: 0 30px;
+    overflow: hidden;
+    display: flex;
+}
+main header.header .bottom .bottomBox .center .menu_ul .menu_li .menu_link {
+    color: #343434;
+    font-size: 16px;
+    position: relative;
+    transition-property: color;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    padding: 27px 0 27px 0;
+    font-family: 'interMedium';
+}
+.modalBox.warningError .top {
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.modalBox .top {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+.modalBox.warningBox .top .linkBox a span {
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+.modalBox.warningError .top .iconBox i {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    background-image: url(../sprite/error.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+main footer.footer {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+}
+main footer.footer .top {
+    width: 100%;
+    min-height: 250px;
+    display: -webkit-box;
+    display: flex;
+    background: linear-gradient(
+180deg
+, #FF8A00 0%, #FF5C00 100%);
+}
+main footer.footer .top .topBox {
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+main footer.footer .top .topBox .left {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main footer.footer .top .topBox .left .iconBox {
+    top: -45px;
+    left: 0;
+}
+main footer.footer .top .topBox .left .iconBox i {
+    display: flex;
+    width: 206px;
+    height: 290px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+main footer.footer .top .topBox .left .textBox .title {
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1px;
+    margin: 0 0 10px 0;
+}
+main footer.footer .top .topBox .left .textBox .desc {
+    width: 100%;
+    color: #fff;
+    line-height: 19px;
+}
+main footer.footer .top .topBox .left .textBox .linkBox .online_link {
+    border: 2px solid #FFFFFF;
+    border-radius: 3px;
+    position: relative;
+    height: 44px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 30px 0 45px;
+    color: #fff;
+    font-size: 14px;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+main footer.footer .top .topBox .right {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main footer.footer .top .topBox .right .iconBox i {
+    display: flex;
+    width: 128px;
+    height: 128px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+main footer.footer .top .topBox .right .textBox {
+    padding: 0;
+    width: 100%;
+}
+main footer.footer .top .topBox .right .textBox .title {
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1px;
+    margin: 0 0 10px 0;
+}
+main footer.footer .top .topBox .right .textBox .linkBox .tazmin_link {
+    border: 2px solid #FFFFFF;
+    border-radius: 3px;
+    position: relative;
+    height: 44px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 30px 0 45px;
+    color: #fff;
+    font-size: 14px;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+main footer.footer .bottom {
+    width: 100%;
+    min-height: 250px;
+}
+main footer.footer .bottom .bottomTop {
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+}
+main footer.footer .bottom .bottomTop .whatsappBox {
+    padding: 0;
+    display: flex;
+    height: 64px;
+}
+main footer.footer .bottom .bottomTop .whatsappBox a {
+    padding: 0 0 0 80px;
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    animation: scaleAnimation2 3s alternate cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+main footer.footer .bottom .bottomTop .whatsappBox a i {
+    content: '';
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main footer.footer .bottom .bottomTop .whatsappBox a .title {
+    width: 100%;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #343434;
+}
+main footer.footer .bottom .bottomTop .whatsappBox a .desc {
+    width: 100%;
+    font-size: 14px;
+    color: #858585;
+}
+main footer.footer .bottom .bottomTop .socialMedia {
+    padding: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main footer.footer .bottom .bottomTop .socialMedia ul li {
+    margin: 0 20px 0 0;
+    display: flex;
+}
+main footer.footer .bottom .bottomTop .socialMedia ul li a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid #E5E5E5;
+    border-radius: 50%;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+main footer.footer .bottom .bottomTop .socialMedia ul li a i {
+    position: relative;
+    z-index: 2;
+    display: block;
+    background-repeat: no-repeat;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+main footer.footer .bottom .bottomTop .socialMedia ul li a.facebook i {
+    width: 11px;
+    height: 20px;
+}
+main footer.footer .bottom .bottomTop .socialMedia ul li a .imgHover {
+    display: none;
+}
+main footer.footer .bottom .bottomTop .socialMedia ul li a .tooltip {
+    padding: 5px 8px;
+    background-color: #303134;
+    color: #fff;
+    font-size: 12px;
+    line-height: 13px;
+    position: absolute;
+    bottom: -35px;
+    left: 22px;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+}
+main footer.footer .bottom .bottomTop .emailBox {
+    padding: 0;
+    display: flex;
+    height: 64px;
+}
+main footer.footer .bottom .bottomTop .emailBox a {
+    padding: 0 0 0 50px;
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+main footer.footer .bottom .bottomCenter {
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+}
+main footer.footer .bottom .bottomCenter .bottomCenterMngCargo {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 0;
+}
+main footer.footer .bottom .bottomCenter .bottomCenterMngCargo .title {
+    width: 100%;
+    font-size: 18px;
+    font-family: 'interMedium';
+    color: #343434;
+    margin: 0 0 20px 0;
+}
+main footer.footer .bottom .bottomCenter .bottomCenterContact {
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 0;
+}
+main footer.footer .bottom .bottomCenter .bottomCenterContact .title {
+    width: 100%;
+    font-size: 18px;
+    font-family: 'interMedium';
+    color: #343434;
+    margin: 0 0 20px 0;
+}
+main footer.footer .bottom .bottomCenter .bottomCenterContact ul {
+    display: flex;
+    flex-flow: wrap;
+}
+main footer.footer .bottom .bottomCenter .bottomCenterContact ul li a {
+    color: #343434;
+    position: relative;
+}
+main footer.footer .bottom .bottomBottom {
+    display: flex;
+}
+main footer.footer .bottom .bottomBottom .footerLogoBox img {
+    width: 174px;
+    height: 33px;
+}
+main footer.footer .bottom .bottomBottom .copyrightBox {
+    padding: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main footer.footer .bottom .bottomBottom .copyrightBox .copyText {
+    font-family: 'interLight';
+    color: #858585;
+}
+main footer.footer .bottom .bottomBottom .desingedDNB {
+    padding: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+main footer.footer .bottom .bottomBottom .desingedDNB .desingText {
+    font-family: 'interLight';
+    color: #858585;
+}
+main footer.footer .bottom .bottomBottom .desingedDNB .desingText a {
+    color: #FF5C00;
+    text-decoration: underline;
+}
+.scrollUp {
+    position: fixed;
+    right: 40px;
+    bottom: 190px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: #fff;
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+    box-shadow: inset 0 0 0 2px rgb(238 36 44 / 40%);
+}
+.scrollUp svg.scrollCircle path {
+    stroke: #FF5C00;
+    stroke-width: 4;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+.scrollUp i {
+    position: absolute;
+    content: '';
+    left: calc(50% - 6.5px);
+    top: calc(50% - 5.5px);
+    height: 11px;
+    width: 13px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    background-repeat: no-repeat;
+}
+main .cookieBox {
+    width: 100%;
+    padding: 30px 70px;
+    background: #6c26ff;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    display: none;
+    justify-content: space-between;
+}
+main .cookieBox .cookieText .cookieTitle {
+    width: 100%;
+    font-family: 'interMedium';
+    font-size: 16px;
+}
+main .cookieBox .cookieText .cookieDesc {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+}
+main .cookieBox .linkBox {
+    display: flex;
+    align-items: center;
+}
+main .cookieBox .linkBox .detailLink {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    position: relative;
+    padding: 0 0 5px;
+    overflow: hidden;
+    margin: 0 40px 0 0;
+}
+main .cookieBox .closed {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background-image: url(../sprite/closed.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+main .cookieBox .linkBox .cookieLink {
+    padding: 15px 40px;
+    border-radius: 3px;
+    background: #fff;
+    color: #343434;
+    line-height: 20px;
+    height: 50px;
+}
+
+
+
